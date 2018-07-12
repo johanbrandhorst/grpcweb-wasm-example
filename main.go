@@ -6,7 +6,6 @@ package main
 import (
 	"crypto/tls"
 	"net/http"
-	"path"
 	"strings"
 	"time"
 
@@ -48,8 +47,7 @@ func main() {
 		}
 
 		// Serve the WASM client
-		wasmContentTypeSetter(folderReader(http.FileServer(bundle.Assets))).ServeHTTP(resp, req)
-
+		wasmContentTypeSetter(http.FileServer(bundle.Assets)).ServeHTTP(resp, req)
 	}
 
 	addr := "localhost:10000"
@@ -76,16 +74,6 @@ func wasmContentTypeSetter(fn http.Handler) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
 		if strings.Contains(req.URL.Path, ".wasm") {
 			w.Header().Set("content-type", "application/wasm")
-		}
-		fn.ServeHTTP(w, req)
-	}
-}
-
-func folderReader(fn http.Handler) http.HandlerFunc {
-	return func(w http.ResponseWriter, req *http.Request) {
-		if strings.HasSuffix(req.URL.Path, "/") {
-			// Use contents of index.html for directory, if present.
-			req.URL.Path = path.Join(req.URL.Path, "index.html")
 		}
 		fn.ServeHTTP(w, req)
 	}

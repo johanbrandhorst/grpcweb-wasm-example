@@ -23,7 +23,7 @@ import (
 //go:generate bash -c "sed -i -e 's;</button>;</button>\\n\\t<div id=\"target\"></div>;' ./html/index.html"
 
 // Integrate generated JS into a Go file for static loading.
-//go:generate bash -c "go run assets_generate.go"
+//go:generate bash -c "go1.11beta1 run assets_generate.go"
 
 var document js.Value
 
