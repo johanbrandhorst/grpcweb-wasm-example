@@ -16,14 +16,14 @@ import (
 
 // Build with Go WASM fork
 //go:generate rm -f ./html/*
-//go:generate bash -c "GOOS=js GOARCH=wasm go1.11beta3 build -o ./html/test.wasm frontend.go"
+//go:generate bash -c "GOOS=js GOARCH=wasm go1.11rc1 build -o ./html/test.wasm frontend.go"
 
-//go:generate bash -c "cp $DOLLAR(go1.11beta3 env GOROOT)/misc/wasm/wasm_exec.html ./html/index.html"
-//go:generate bash -c "cp $DOLLAR(go1.11beta3 env GOROOT)/misc/wasm/wasm_exec.js ./html/wasm_exec.js"
+//go:generate bash -c "cp $DOLLAR(go1.11rc1 env GOROOT)/misc/wasm/wasm_exec.html ./html/index.html"
+//go:generate bash -c "cp $DOLLAR(go1.11rc1 env GOROOT)/misc/wasm/wasm_exec.js ./html/wasm_exec.js"
 //go:generate bash -c "sed -i -e 's;</button>;</button>\\n\\t<div id=\"target\"></div>;' ./html/index.html"
 
 // Integrate generated JS into a Go file for static loading.
-//go:generate bash -c "go1.11beta3 run assets_generate.go"
+//go:generate bash -c "go1.11rc1 run assets_generate.go"
 
 var document js.Value
 
