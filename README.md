@@ -1,9 +1,9 @@
 # gRPC-Web WASM example
-Small example server using gRPC-Web with WASM using `go1.11rc1`
+Small example server using gRPC-Web with WASM using `go`
 
 ## Requirements
 
-1. `go1.11rc1`. See https://golang.org/dl/#go1.11rc1 for installation
+1. `go` 1.11. See https://golang.org/dl/#go for installation
 instructions.
 1. The Google protobuf compiler, `protoc`.
 
