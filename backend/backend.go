@@ -22,11 +22,11 @@ var _ web.BackendServer = (*Backend)(nil)
 
 func (b Backend) GetUser(ctx context.Context, req *web.GetUserRequest) (*web.User, error) {
 	if req.GetUserId() != "1234" {
-		st := status.New(codes.InvalidArgument, "invalid id")
+		st := status.New(codes.NotFound, "invalid id")
 		detSt, err := st.WithDetails(&errdetails.BadRequest{
 			FieldViolations: []*errdetails.BadRequest_FieldViolation{
 				{
-					Field:       "user",
+					Field:       "user_id",
 					Description: "That user does not exist",
 				},
 			},
