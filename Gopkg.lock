@@ -30,13 +30,12 @@
   version = "v1.2.0"
 
 [[projects]]
-  branch = "set-content-type-in-response"
-  digest = "1:167385a60bb8e749e827fcbcf7bc6e5bf22aa545949a783a07068bfa04d3f030"
+  digest = "1:14419f9d34e189b244571b079c34a0a599e1ff3cfe2a040719e2616fcbecad38"
   name = "github.com/improbable-eng/grpc-web"
   packages = ["go/grpcweb"]
   pruneopts = "NUT"
-  revision = "4883019eae31cf9b891633279c6a92d0597ea920"
-  source = "github.com/johanbrandhorst/grpc-web"
+  revision = "f5a2e82437e4b5cb013a3669efb17dc7bf9ea110"
+  version = "v0.9.1"
 
 [[projects]]
   digest = "1:810d960260b42c751f5254f6dbff5e6c79c8047b90a9bf4a06bba479b99aff1d"
