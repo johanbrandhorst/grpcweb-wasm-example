@@ -129,14 +129,14 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:db904836d6dc92615decd1a4a6c17973838f7b9b3c8e61668f2f3d1c071562e8"
+  digest = "1:bb1d7b9f535fd3f634440825c1ee5c36b3f2c12318a6152ea2575d31f5a7502a"
   name = "google.golang.org/genproto"
   packages = [
     "googleapis/rpc/errdetails",
     "googleapis/rpc/status",
   ]
   pruneopts = "NUT"
-  revision = "8b2cc369ab52e0003a878865c9372afdd6ca5c5a"
+  revision = "4f5b463f9597cbe0dd13a6a2cd4f85e788d27508"
 
 [[projects]]
   branch = "add-grpc-web-client"
@@ -182,7 +182,6 @@
     "github.com/improbable-eng/grpc-web/go/grpcweb",
     "github.com/shurcooL/vfsgen",
     "github.com/sirupsen/logrus",
-    "golang.org/x/net/context",
     "google.golang.org/genproto/googleapis/rpc/errdetails",
     "google.golang.org/grpc",
     "google.golang.org/grpc/codes",
