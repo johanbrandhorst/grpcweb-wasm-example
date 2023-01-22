@@ -12,7 +12,7 @@ require (
 
 require (
 	github.com/golang/glog v1.0.0 // indirect
-	github.com/gorilla/websocket v1.2.0 // indirect
+	github.com/gorilla/websocket v1.4.1 // indirect
 	github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f // indirect
 	github.com/rs/cors v1.4.0 // indirect
 	github.com/stretchr/testify v1.8.1 // indirect
