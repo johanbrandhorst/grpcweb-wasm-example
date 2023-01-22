@@ -15,7 +15,7 @@ import (
 	"google.golang.org/grpc/grpclog"
 
 	"github.com/johanbrandhorst/grpcweb-wasm-example/backend"
-	"github.com/johanbrandhorst/grpcweb-wasm-example/frontend/bundle"
+	"github.com/johanbrandhorst/grpcweb-wasm-example/frontend/html"
 	web "github.com/johanbrandhorst/grpcweb-wasm-example/proto"
 )
 
@@ -47,7 +47,7 @@ func main() {
 		}
 
 		// Serve the WASM client
-		wasmContentTypeSetter(http.FileServer(bundle.Assets)).ServeHTTP(resp, req)
+		wasmContentTypeSetter(http.FileServer(http.FS(html.Assets))).ServeHTTP(resp, req)
 	}
 
 	addr := "localhost:10000"

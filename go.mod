@@ -5,9 +5,8 @@ go 1.19
 require (
 	github.com/golang/protobuf v1.3.0
 	github.com/improbable-eng/grpc-web v0.9.1
-	github.com/shurcooL/vfsgen v0.0.0-20180414153424-bded413e56ef
 	github.com/sirupsen/logrus v1.0.5
-	google.golang.org/genproto v0.0.0-20190227213309-4f5b463f9597
+	google.golang.org/genproto v0.0.0-20180831171423-11092d34479b
 	google.golang.org/grpc v1.19.0
 )
 
@@ -16,7 +15,6 @@ require (
 	github.com/gorilla/websocket v1.2.0 // indirect
 	github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f // indirect
 	github.com/rs/cors v1.4.0 // indirect
-	github.com/shurcooL/httpfs v0.0.0-20171119174359-809beceb2371 // indirect
 	github.com/stretchr/testify v1.8.1 // indirect
 	golang.org/x/crypto v0.0.0-20180621125126-a49355c7e3f8 // indirect
 	golang.org/x/net v0.0.0-20190213061140-3a22650c66bd // indirect

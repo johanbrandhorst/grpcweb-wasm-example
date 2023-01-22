@@ -1,3 +1,5 @@
+//go:build js && wasm
+
 package main
 
 import (
@@ -13,17 +15,6 @@ import (
 
 	web "github.com/johanbrandhorst/grpcweb-wasm-example/proto"
 )
-
-// Build with Go WASM fork
-//go:generate rm -f ./html/*
-//go:generate bash -c "GOOS=js GOARCH=wasm go build -o ./html/test.wasm frontend.go"
-
-//go:generate bash -c "cp $DOLLAR(go env GOROOT)/misc/wasm/wasm_exec.html ./html/index.html"
-//go:generate bash -c "cp $DOLLAR(go env GOROOT)/misc/wasm/wasm_exec.js ./html/wasm_exec.js"
-//go:generate bash -c "sed -i -e 's;</button>;</button>\\n\\t<div id=\"target\"></div>;' ./html/index.html"
-
-// Integrate generated JS into a Go file for static loading.
-//go:generate bash -c "go run assets_generate.go"
 
 var document js.Value
 
@@ -43,6 +34,8 @@ func init() {
 }
 
 func main() {
+	// Dial the server which is hosting our wasm code.
+	// This is equivalent to fetch("") in the browser.
 	cc, err := grpc.Dial("")
 	if err != nil {
 		grpclog.Println(err)

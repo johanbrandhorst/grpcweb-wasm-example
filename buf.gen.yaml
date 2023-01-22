@@ -1,0 +1,8 @@
+version: v1
+plugins:
+  - name: go
+    out: .
+    path: bin/protoc-gen-go
+    opt:
+      - paths=source_relative
+      - plugins=grpc
