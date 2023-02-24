@@ -16,10 +16,11 @@ require (
 	github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f // indirect
 	github.com/rs/cors v1.4.0 // indirect
 	github.com/stretchr/testify v1.8.1 // indirect
-	golang.org/x/crypto v0.0.0-20180621125126-a49355c7e3f8 // indirect
-	golang.org/x/net v0.0.0-20190213061140-3a22650c66bd // indirect
-	golang.org/x/sys v0.0.0-20180707002001-3c6ecd8f22c6 // indirect
-	golang.org/x/text v0.3.0 // indirect
+	golang.org/x/crypto v0.1.0 // indirect
+	golang.org/x/net v0.1.0 // indirect
+	golang.org/x/sys v0.1.0 // indirect
+	golang.org/x/term v0.1.0 // indirect
+	golang.org/x/text v0.4.0 // indirect
 	gopkg.in/airbrake/gobrake.v2 v2.0.9 // indirect
 	gopkg.in/gemnasium/logrus-airbrake-hook.v2 v2.1.2 // indirect
 )
